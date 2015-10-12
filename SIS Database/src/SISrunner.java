@@ -1,10 +1,12 @@
+import java.io.IOException;
 
 public class SISrunner
 	{
 
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 			{
-				// TODO Auto-generated method stub
+				importFile.fillStudentList();
+				System.out.println(importFile.studentList.get(0).getFirstName());
 
 			}
 
