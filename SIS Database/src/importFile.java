@@ -12,7 +12,7 @@ public class importFile
 				Scanner fileInput = new Scanner (new File("studentList.txt"));
 				while (fileInput.hasNext())
 					{
-						studentList.add(new Student(fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next()));
+						studentList.add(new Student(fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), fileInput.next(), 0.0));
 					}
 			}
 

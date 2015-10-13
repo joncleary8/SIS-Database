@@ -10,7 +10,7 @@ public class Student
 		private String thirdPeriod;
 		private static String thirdPeriodGrade;
 		private static double GPA;
-		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG)
+		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG, double g)
 			{
 				firstName = fN;
 				lastName = lN;
@@ -20,6 +20,7 @@ public class Student
 				secondPeriodGrade = sG;
 				thirdPeriod = tP;
 				thirdPeriodGrade = tG;
+				
 			}
 		public static void calculateGPA()
 			{
