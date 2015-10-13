@@ -8,13 +8,13 @@ public class SISrunner
 		public static void main(String[] args) throws IOException
 			{
 				importFile.fillStudentList();
-			   mainMenu();
+				mainMenu();
 
 
 			}
 		
 		
-		public static void subMenuAddAndDelete()
+		public static void subMenuAddAndDelete() throws IOException
 		{
 			Scanner secondaryInput = new Scanner(System.in);
 			
@@ -41,7 +41,7 @@ public class SISrunner
 			}
 		}
 		
-		public static void subMenuChangeStudent()
+		public static void subMenuChangeStudent() throws IOException
 		{
 			
 			Scanner secondaryInput = new Scanner(System.in);
@@ -59,7 +59,7 @@ public class SISrunner
 					ChangeGrade.changeGradeRun();
 					break;
 				case 2:
-					//Run the switch class class
+					SwitchClass.switchClassRun();
 					break;
 				case 3:
 					mainMenu();
@@ -68,7 +68,7 @@ public class SISrunner
 			}
 		}
 		
-		public static void subMenuSortStudents()
+		public static void subMenuSortStudents() throws IOException
 		{
 			Scanner secondaryInput = new Scanner(System.in);
 			
@@ -97,7 +97,7 @@ public class SISrunner
 				default: subMenuSortStudents();
 			}
 		}
-		public static void mainMenu()
+		public static void mainMenu() throws IOException
 		{
 			Scanner mainInput = new Scanner(System.in);
 			System.out.println("What would you like to do?");

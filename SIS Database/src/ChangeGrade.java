@@ -20,13 +20,8 @@ public class ChangeGrade
 	}
 	public static void printStudents()
 	{
-		int c =0;
-		for(Student fred : importFile.studentList)
-		{
-			
-			System.out.println(c+1 + ") "+fred.getFirstName());
-			c++;
-		}
+		for(int c = 0; c < importFile.studentList.size(); c++)
+			System.out.println((c+1) + ") " + importFile.studentList.get(c).getFirstName() + " " + importFile.studentList.get(c).getLastName());
 	}
 	public static void selectStudent()
 	{
