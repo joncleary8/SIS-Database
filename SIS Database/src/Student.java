@@ -4,15 +4,12 @@ public class Student
 		private String firstName;
 		private String lastName;
 		private String firstPeriod;
-		private String firstPeriodGrade;
+		private static String firstPeriodGrade;
 		private String secondPeriod;
-		private String secondPeriodGrade;
+		private static String secondPeriodGrade;
 		private String thirdPeriod;
-		private String thirdPeriodGrade;
-		private double firstGradeValue;
-		private double secondGradeValue;
-		private double thirdGradeValue;
-		private double GPA;
+		private static String thirdPeriodGrade;
+		private static double GPA;
 		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG)
 			{
 				firstName = fN;
@@ -24,6 +21,74 @@ public class Student
 				thirdPeriod = tP;
 				thirdPeriodGrade = tG;
 			}
+		public static void calculateGPA()
+			{
+				double firstGradeValue = 0.0, secondGradeValue = 0.0, thirdGradeValue = 0.0;
+				if (firstPeriodGrade.substring(0,1).equals("A"))
+					{
+						firstGradeValue= 4.0;
+					}
+				else if (firstPeriodGrade.substring(0,1).equals("B"))
+					{
+						firstGradeValue= 3.0;
+					}
+				else if (firstPeriodGrade.substring(0,1).equals("C"))
+					{
+						firstGradeValue= 2.0;
+					}
+				else if (firstPeriodGrade.substring(0,1).equals("D"))
+					{
+						firstGradeValue= 1.0;
+					}
+				else
+					{
+						firstGradeValue= 0.0;
+					}
+				if (secondPeriodGrade.substring(0,1).equals("A"))
+					{
+						secondGradeValue= 4.0;
+					}
+				else if (secondPeriodGrade.substring(0,1).equals("B"))
+					{
+						secondGradeValue= 3.0;
+					}
+				else if (secondPeriodGrade.substring(0,1).equals("C"))
+					{
+						secondGradeValue= 2.0;
+					}
+				else if (secondPeriodGrade.substring(0,1).equals("D"))
+					{
+						secondGradeValue= 1.0;
+					}
+				else
+					{
+						secondGradeValue= 0.0;
+					}
+				if (thirdPeriodGrade.substring(0,1).equals("A"))
+					{
+						thirdGradeValue= 4.0;
+					}
+				else if (thirdPeriodGrade.substring(0,1).equals("B"))
+					{
+						thirdGradeValue= 3.0;
+					}
+				else if (thirdPeriodGrade.substring(0,1).equals("C"))
+					{
+						thirdGradeValue= 2.0;
+					}
+				else if (thirdPeriodGrade.substring(0,1).equals("D"))
+					{
+						thirdGradeValue= 1.0;
+					}
+				else
+					{
+						thirdGradeValue= 0.0;
+					}
+				int temporary= (int)((firstGradeValue + secondGradeValue + thirdGradeValue)/3)*100;
+				GPA = (double)temporary/100.0;
+				
+			}
+		
 		public String getFirstName()
 			{
 				return firstName;
@@ -87,30 +152,6 @@ public class Student
 		public void setThirdPeriodGrade(String thirdPeriodGrade)
 			{
 				this.thirdPeriodGrade = thirdPeriodGrade;
-			}
-		public double getFirstGradeValue()
-			{
-				return firstGradeValue;
-			}
-		public void setFirstGradeValue(double firstGradeValue)
-			{
-				this.firstGradeValue = firstGradeValue;
-			}
-		public double getSecondGradeValue()
-			{
-				return secondGradeValue;
-			}
-		public void setSecondGradeValue(double secondGradeValue)
-			{
-				this.secondGradeValue = secondGradeValue;
-			}
-		public double getThirdGradeValue()
-			{
-				return thirdGradeValue;
-			}
-		public void setThirdGradeValue(double thirdGradeValue)
-			{
-				this.thirdGradeValue = thirdGradeValue;
 			}
 		public double getGPA()
 			{
