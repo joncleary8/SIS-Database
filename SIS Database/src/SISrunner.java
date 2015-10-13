@@ -59,7 +59,7 @@ public class SISrunner
 					ChangeGrade.changeGradeRun();
 					break;
 				case 2:
-					SwitchClass.switchClassRun();
+					ChangeClass.runChangeClass();
 					break;
 				case 3:
 					mainMenu();
