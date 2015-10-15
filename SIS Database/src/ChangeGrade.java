@@ -9,22 +9,26 @@ public class ChangeGrade
  static String letterGrade;
  static String modifier;
  static String newGrade;
- static int size = importFile.studentList.size()+1;
+ static int size;
  static Scanner userInput = new Scanner(System.in);
  
- /*
-  * found errors if grade modifier is left blank, and when I go back after the first print of list, it
-  * runs the change grade part twice, even after modified.
-  */
+
 	public static void changeGradeRun() throws IOException
 	{
-
+		studentPos =0;
+		selectedClass=0;
+		letterGrade= " ";
+		modifier =" ";
+		newGrade = " ";
+		size = importFile.studentList.size()+1;
+		
 		System.out.println("Which student's grade would you like to change?");
 		printStudents();
 		studentPos = userInput.nextInt()-1;
 		selectStudent();
 		selectPeriod();
 		printSelectedStudent();
+		SISrunner.subMenuChangeStudent();
 	}
 	public static void printStudents()
 	{
@@ -76,7 +80,7 @@ public class ChangeGrade
 			System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getFirstPeriodGrade()+" in "+importFile.studentList.get(studentPos).getFirstPeriod()+" to?");
 			letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 			System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-			modifier = classScanner.nextLine().substring(0,1);
+			modifier = classScanner.nextLine()+" ".substring(0,1);
 			newGrade = letterGrade+modifier;
 			importFile.studentList.get(studentPos).setFirstPeriodGrade(newGrade);
 			break;
@@ -86,7 +90,7 @@ public class ChangeGrade
 				System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getSecondPeriodGrade()+" in "+importFile.studentList.get(studentPos).getSecondPeriod()+" to?");
 				letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 				System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-				modifier = classScanner.nextLine().substring(0,1);
+				modifier = classScanner.nextLine()+" ".substring(0,1);
 				newGrade = letterGrade+modifier;
 				importFile.studentList.get(studentPos).setSecondPeriodGrade(newGrade);
 				break;
@@ -96,7 +100,7 @@ public class ChangeGrade
 				System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getThirdPeriodGrade()+" in "+importFile.studentList.get(studentPos).getThirdPeriod()+" to?");
 				letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 				System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-				modifier = classScanner.nextLine().substring(0,1);
+				modifier = classScanner.nextLine()+" ".substring(0,1);
 				newGrade = letterGrade+modifier;
 				importFile.studentList.get(studentPos).setThirdPeriodGrade(newGrade);
 				break;
@@ -105,6 +109,7 @@ public class ChangeGrade
 			default:selectPeriod();
 				break;
 		}
+	
 	}
 	public static void printSelectedStudent()
 	{
@@ -114,6 +119,7 @@ public class ChangeGrade
 		System.out.print(" (2) "+importFile.studentList.get(studentPos).getSecondPeriod()+" "+importFile.studentList.get(studentPos).getSecondPeriodGrade()+" //");
 	
 		System.out.print(" (3) "+importFile.studentList.get(studentPos).getThirdPeriod()+" "+importFile.studentList.get(studentPos).getThirdPeriodGrade()+" //");
+		System.out.println();
 	}
 	
 	
