@@ -104,6 +104,7 @@ public class SISrunner
 			System.out.println("1) Add or delete a student");
 			System.out.println("2) Change students grade or schedule");
 			System.out.println("3) Sort students");
+			System.out.println("4) Finished Working. End Program");
 			mainChoice = mainInput.nextInt();
 			switch(mainChoice)
 			{
@@ -115,6 +116,8 @@ public class SISrunner
 					break;
 				case 3:
 					subMenuSortStudents();
+					break;
+				case 4:
 					break;
 				default: mainMenu();
 				

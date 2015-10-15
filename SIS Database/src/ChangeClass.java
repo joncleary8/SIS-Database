@@ -30,6 +30,8 @@ public class ChangeClass
 									changeClass();
 								System.out.println("Here is " + importFile.studentList.get(studentNum).getFirstName() + "'s new schedule. ");
 								printClasses();
+								System.out.println("\n");
+								SISrunner.subMenuChangeStudent();
 							}
 					}
 			}
@@ -45,7 +47,7 @@ public class ChangeClass
 				else
 					System.out.println("What class would you like to switch it with? ");
 				printClasses();
-				System.out.println("// (4) Go Back.");
+				System.out.println(" (4) Go Back.");
 				classNum[i] = userInput.nextInt();
 				switch(classNum[i])
 					{
