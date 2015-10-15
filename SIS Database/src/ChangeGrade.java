@@ -11,6 +11,11 @@ public class ChangeGrade
  static String newGrade;
  static int size = importFile.studentList.size()+1;
  static Scanner userInput = new Scanner(System.in);
+ 
+ /*
+  * found errors if grade modifier is left blank, and when I go back after the first print of list, it
+  * runs the change grade part twice, even after modified.
+  */
 	public static void changeGradeRun() throws IOException
 	{
 
@@ -37,7 +42,6 @@ public class ChangeGrade
 
 		if(studentPos+1 == size)
 			SISrunner.subMenuChangeStudent();
-
 		else
 			{
 			System.out.println(importFile.studentList.get(studentPos).getFirstName());
