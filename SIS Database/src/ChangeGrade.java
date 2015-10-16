@@ -39,7 +39,7 @@ public class ChangeGrade
 		for(int c = 0; c < importFile.studentList.size(); c++)
 			System.out.println((c+1) + ") " + importFile.studentList.get(c).getFirstName() + " " + importFile.studentList.get(c).getLastName());
 
-		System.out.println(size+") Go Back");
+		System.out.println(importFile.studentList.size()+1+") Go Back");
 
 	}
 	public static void selectStudent() throws IOException

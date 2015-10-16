@@ -33,7 +33,8 @@ public class SISrunner
 				//Run the add student class
 					break;
 				case 2:
-				//Run the delete student class
+				RemoveStudent.deleteStudentRun();
+				
 					break;
 				case 3:
 					mainMenu();
@@ -59,7 +60,6 @@ public class SISrunner
 			{
 				case 1:
 					ChangeGrade.changeGradeRun();
-					setGPA();
 					break;
 				case 2:
 					ChangeClass.runChangeClass();
