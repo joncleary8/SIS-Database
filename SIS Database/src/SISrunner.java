@@ -30,7 +30,7 @@ public class SISrunner
 			switch(secondChoice)
 			{
 				case 1:
-				//Run the add student class
+				AddStudent.addStudentRun();
 					break;
 				case 2:
 				RemoveStudent.deleteStudentRun();

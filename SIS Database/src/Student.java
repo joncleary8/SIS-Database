@@ -10,7 +10,7 @@ public class Student
 		private String thirdPeriod;
 		private  String thirdPeriodGrade;
 		private double GPA;
-		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG, double g)
+		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG)
 			{
 				firstName = fN;
 				lastName = lN;
@@ -20,7 +20,6 @@ public class Student
 				secondPeriodGrade = sG;
 				thirdPeriod = tP;
 				thirdPeriodGrade = tG;
-				GPA = g;
 			}
 		
 		
