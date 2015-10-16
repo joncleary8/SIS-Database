@@ -28,6 +28,7 @@ public class ChangeGrade
 		selectStudent();
 		selectPeriod();
 		printSelectedStudent();
+		SISrunner.setGPA();
 		SISrunner.subMenuChangeStudent();
 	}
 	public static void printStudents()

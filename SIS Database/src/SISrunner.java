@@ -7,9 +7,9 @@ public class SISrunner
 		static int secondChoice;
 		public static void main(String[] args) throws IOException
 			{
-			//All grades are the same//
-			//Cause of problem is making firstPeriodGrade, secondPeriodGrade, and thirdPeriodGrade static//
+				
 				importFile.fillStudentList();
+				setGPA();
 				mainMenu();
 
 
@@ -59,6 +59,7 @@ public class SISrunner
 			{
 				case 1:
 					ChangeGrade.changeGradeRun();
+					setGPA();
 					break;
 				case 2:
 					ChangeClass.runChangeClass();
@@ -85,7 +86,7 @@ public class SISrunner
 			switch(secondChoice)
 			{
 				case 1:	
-					sortByLastName.sortByLastNameRun();
+					//sortByLastName.sortByLastNameRun();
 					break;
 				case 2:
 					//Run the sort GPA class
@@ -125,6 +126,16 @@ public class SISrunner
 				
 			}
 			
+		}
+		public static void setGPA()
+		{
+			for(int i=0; i<importFile.studentList.size();i++)
+				SortByGPA.calculateGPA(i);
+		}
+		public static void printGPA()
+		{
+			for(int i=0; i<importFile.studentList.size();i++)
+				System.out.println(importFile.studentList.get(i).getFirstName() + " " + importFile.studentList.get(i).getLastName() + " " + importFile.studentList.get(i).getGPA());
 		}
 
 	}
