@@ -80,7 +80,8 @@ public class ChangeGrade
 			System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getFirstPeriodGrade()+" in "+importFile.studentList.get(studentPos).getFirstPeriod()+" to?");
 			letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 			System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-			modifier = classScanner.nextLine()+" ".substring(0,1);
+			modifier = classScanner.nextLine()+" ";
+			modifier = modifier.substring(0,1);
 			newGrade = letterGrade+modifier;
 			importFile.studentList.get(studentPos).setFirstPeriodGrade(newGrade);
 			break;
@@ -90,7 +91,8 @@ public class ChangeGrade
 				System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getSecondPeriodGrade()+" in "+importFile.studentList.get(studentPos).getSecondPeriod()+" to?");
 				letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 				System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-				modifier = classScanner.nextLine()+" ".substring(0,1);
+				modifier = classScanner.nextLine()+" ";
+				modifier = modifier.substring(0,1);
 				newGrade = letterGrade+modifier;
 				importFile.studentList.get(studentPos).setSecondPeriodGrade(newGrade);
 				break;
@@ -100,7 +102,8 @@ public class ChangeGrade
 				System.out.println("What letter grade would you like to change "+importFile.studentList.get(studentPos).getFirstName()+"'s "+ importFile.studentList.get(studentPos).getThirdPeriodGrade()+" in "+importFile.studentList.get(studentPos).getThirdPeriod()+" to?");
 				letterGrade = classScanner.nextLine().substring(0,1).toUpperCase();
 				System.out.println("What modifier would you like to add? i.e. + - or nothing(just press enter)");
-				modifier = classScanner.nextLine()+" ".substring(0,1);
+				modifier = classScanner.nextLine()+" ";
+				modifier = modifier.substring(0,1);
 				newGrade = letterGrade+modifier;
 				importFile.studentList.get(studentPos).setThirdPeriodGrade(newGrade);
 				break;

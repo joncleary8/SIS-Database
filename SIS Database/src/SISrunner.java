@@ -7,6 +7,8 @@ public class SISrunner
 		static int secondChoice;
 		public static void main(String[] args) throws IOException
 			{
+			//All grades are the same//
+			//Cause of problem is making firstPeriodGrade, secondPeriodGrade, and thirdPeriodGrade static//
 				importFile.fillStudentList();
 				mainMenu();
 

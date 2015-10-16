@@ -20,7 +20,7 @@ public class Student
 				secondPeriodGrade = sG;
 				thirdPeriod = tP;
 				thirdPeriodGrade = tG;
-				
+				GPA = g;
 			}
 		public static void calculateGPA()
 			{

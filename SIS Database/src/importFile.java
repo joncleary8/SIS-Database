@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 public class importFile
 	{
+	
+	//Error where all of the grades are the same. Classes differ//
+	
 		static ArrayList <Student> studentList = new ArrayList <Student>();
 		public static void fillStudentList() throws IOException
 			{
