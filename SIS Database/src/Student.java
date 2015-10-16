@@ -4,12 +4,12 @@ public class Student
 		private String firstName;
 		private String lastName;
 		private String firstPeriod;
-		private static String firstPeriodGrade;
+		private String firstPeriodGrade;
 		private String secondPeriod;
-		private static String secondPeriodGrade;
+		private String secondPeriodGrade;
 		private String thirdPeriod;
-		private static String thirdPeriodGrade;
-		private static double GPA;
+		private  String thirdPeriodGrade;
+		private double GPA;
 		public Student(String fN,String lN, String fP, String fG, String sP, String sG, String tP, String tG, double g)
 			{
 				firstName = fN;
