@@ -1,20 +1,24 @@
-import java.util.ArrayList;
+iimport java.util.ArrayList;
 
 public class sortByLastName
 	{
-		private static int i = 0;
 		private static ArrayList<Student> tempStudentList = new ArrayList<Student>();
 		public static void sortByLastNameRun()
 			{
-				for(int i = 0; i < importFile.studentList.size() - 1; i++)
+				int r = 0;
+				for(int i = 1; i < importFile.studentList.size() - 1; i++)
 					{
-						int sorter = compareNames(importFile.studentList.get(i), importFile.studentList.get(i + 1));
-						System.out.println(sorter);
+						int sorter = compareNames(importFile.studentList.get(r), importFile.studentList.get(i + 1));
+						if(sorter == 1)
+							{
+								
+							}
 							
 					}
 			}
 		public static int compareNames(Student g1 , Student g2)
 			{
+				int i = 0;
 				char nameFirst = 65, nameSecond = 65;
 				if(g1.getLastName().equals(g2.getLastName()))
 					{
@@ -46,6 +50,6 @@ public class sortByLastName
 						return compareNames(g1, g2);
 					}
 				else
-					return 1;
+					return 0;
 			}
 	}
