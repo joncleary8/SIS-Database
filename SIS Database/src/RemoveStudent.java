@@ -21,7 +21,6 @@ static Scanner userInput = new Scanner(System.in);
 		System.out.println("Here is your updated student list");
 		ChangeGrade.printStudents();
 		System.out.println();
-		SISrunner.subMenuAddAndDelete();
 	}
 	
 	
