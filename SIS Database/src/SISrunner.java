@@ -31,11 +31,10 @@ public class SISrunner
 			{
 				case 1:
 				AddStudent.addStudentRun();
-				subMenuAddAndDelete();
 					break;
 				case 2:
 				RemoveStudent.deleteStudentRun();
-				subMenuAddAndDelete();
+				
 					break;
 				case 3:
 					mainMenu();
