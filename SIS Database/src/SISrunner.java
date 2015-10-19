@@ -86,7 +86,7 @@ public class SISrunner
 			switch(secondChoice)
 			{
 				case 1:	
-					//sortByLastName.sortByLastNameRun();
+					sortByLastName.sortByLastNameRun();
 					break;
 				case 2:
 					//Run the sort GPA class
