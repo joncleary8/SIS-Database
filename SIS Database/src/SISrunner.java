@@ -17,6 +17,7 @@ public class SISrunner
 			}
 		
 		
+
 		public static void subMenuAddAndDelete() throws IOException
 		{
 			Scanner secondaryInput = new Scanner(System.in);
@@ -32,10 +33,11 @@ public class SISrunner
 			{
 				case 1:
 				AddStudent.addStudentRun();
+				subMenuAddAndDelete();
 					break;
 				case 2:
 				RemoveStudent.deleteStudentRun();
-				
+				subMenuAddAndDelete();
 					break;
 				case 3:
 					mainMenu();
@@ -44,6 +46,7 @@ public class SISrunner
 					break;
 			}
 		}
+		
 		
 		public static void subMenuChangeStudent() throws IOException
 		{
@@ -103,6 +106,37 @@ public class SISrunner
 				default: subMenuSortStudents();
 			}
 		}
+		
+		
+		public static void subSubMenuSortClass() throws IOException
+		{
+			int thirdChoice;
+			Scanner terceryInput = new Scanner(System.in);	
+			System.out.println("Which class would you like to sort by?");
+			System.out.println("1) First period");
+			System.out.println("2) Second period");
+			System.out.println("3) Third period");
+			System.out.println("4) Return to main menu");
+			thirdChoice = terceryInput.nextInt();
+			
+			switch(thirdChoice)
+			{
+			
+				case 1:
+				
+				case 2:
+					
+				case 3:
+				
+				case 4:mainMenu();
+					break;
+ 			}
+		
+		
+		}
+		
+		
+		
 		public static void mainMenu() throws IOException
 		{
 			Scanner mainInput = new Scanner(System.in);
