@@ -92,13 +92,19 @@ public class SISrunner
 				case 1:	
 					Collections.sort(importFile.studentList, new sortByLastName());
 					SortByGPA.printStudentsInfo();
+					System.out.println();
+					mainMenu();
 					break;
 				case 2:
 					Collections.sort(importFile.studentList, new SortByGPA());
 					SortByGPA.printStudentsInfo();
+					System.out.println();
+					mainMenu();
 					break;
 				case 3:
-					//
+					subSubMenuSortClass();
+					System.out.println();
+					mainMenu();
 					break;
 				case 4:
 					mainMenu();
@@ -123,14 +129,18 @@ public class SISrunner
 			{
 			
 				case 1:
-				
+					Collections.sort(importFile.studentList, new SortByPeriodOne());
+					break;
 				case 2:
-					
+					Collections.sort(importFile.studentList, new SortByPeriodTwo());
+					break;
 				case 3:
-				
+					Collections.sort(importFile.studentList, new SortByPeriodThree());
+					break;
 				case 4:mainMenu();
 					break;
  			}
+			SortByGPA.printStudentsInfo();
 		
 		
 		}
