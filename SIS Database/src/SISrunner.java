@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class SISrunner
 	{
@@ -86,13 +87,15 @@ public class SISrunner
 			switch(secondChoice)
 			{
 				case 1:	
-					sortByLastName.sortByLastNameRun();
+					Collections.sort(importFile.studentList, new sortByLastName());
+					SortByGPA.printStudentsInfo();
 					break;
 				case 2:
-					//Run the sort GPA class
+					Collections.sort(importFile.studentList, new SortByGPA());
+					SortByGPA.printStudentsInfo();
 					break;
 				case 3:
-					//Run the sort class class
+					//
 					break;
 				case 4:
 					mainMenu();
