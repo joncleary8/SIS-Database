@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddStudent 
+public class AdddStudent 
 {
 	public static void addStudentRun()
 	{
