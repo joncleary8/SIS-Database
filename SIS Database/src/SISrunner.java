@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Collections;
 
-public class SISrunner
+public class SIISrunner
 	{
 		static int mainChoice;
 		static int secondChoice;
